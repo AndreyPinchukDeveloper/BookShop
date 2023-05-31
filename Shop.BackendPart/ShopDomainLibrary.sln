@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopDomainLibrary", "ShopDomainLibrary\ShopDomainLibrary.csproj", "{7F8BB9CC-7CC5-4383-A4B2-2BBC4F1E2D67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopDomainLibrary", "ShopDomainLibrary\ShopDomainLibrary.csproj", "{7F8BB9CC-7CC5-4383-A4B2-2BBC4F1E2D67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9D3D52C4-B8F7-45ED-B297-DE04C37D47A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{DD02CF1C-F0B6-471F-BFB2-28659A2C3D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreMemory", "StoreMemory\StoreMemory.csproj", "{EC8D42D0-3783-46B2-9D97-D3442629BCBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,17 @@ Global
 		{7F8BB9CC-7CC5-4383-A4B2-2BBC4F1E2D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F8BB9CC-7CC5-4383-A4B2-2BBC4F1E2D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F8BB9CC-7CC5-4383-A4B2-2BBC4F1E2D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8D42D0-3783-46B2-9D97-D3442629BCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8D42D0-3783-46B2-9D97-D3442629BCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8D42D0-3783-46B2-9D97-D3442629BCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8D42D0-3783-46B2-9D97-D3442629BCBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F8BB9CC-7CC5-4383-A4B2-2BBC4F1E2D67} = {9D3D52C4-B8F7-45ED-B297-DE04C37D47A1}
+		{EC8D42D0-3783-46B2-9D97-D3442629BCBA} = {DD02CF1C-F0B6-471F-BFB2-28659A2C3D68}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C3A94CED-9C45-41C3-A6C3-FF9ACC5BE028}
