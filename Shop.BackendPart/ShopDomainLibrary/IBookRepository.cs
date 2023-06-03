@@ -8,6 +8,7 @@ namespace ShopDomainLibrary
 {
     public interface IBookRepository
     {
-        Book[] GetAllByTitle(string title);//Use List 
+        Book[] GetAllByIsbn(string isbn);
+        Book[] GetAllByTitleOrAuthor(string title);//Use List 
     }
 }
