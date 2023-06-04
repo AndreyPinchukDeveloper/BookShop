@@ -8,9 +8,23 @@ namespace ShopDomainLibrary.Services
 {
     public class BookService
     {
+        private readonly IBookRepository _bookRepository;
+
+        public BookService(IBookRepository bookRepository)
+        {
+            _bookRepository = bookRepository;
+        }
+
         public Book[] GetAllByQuery(string query)
         {
-            throw new Exception();
+            if (IsIsbn(query))
+            {
+                return _bookRepository.GetAllByIsbn(query);
+            }
+
+            return _bookRepository.GetAllByTitleOrAuthor(query);
         }
+
+        
     }
 }

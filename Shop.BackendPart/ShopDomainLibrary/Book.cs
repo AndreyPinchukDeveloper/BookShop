@@ -21,6 +21,11 @@ namespace ShopDomainLibrary
             Title = title;
             Author = author;
             Isbn = isbn;
-        }  
+        }
+
+        internal static bool IsIsbn(string query)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
