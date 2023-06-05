@@ -25,7 +25,7 @@ namespace ShopDomainLibrary
 
         internal static bool IsIsbn(string query)
         {
-            throw new NotImplementedException();
+            return false;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace ShopDomainLibrary.Services
 
         public Book[] GetAllByQuery(string query)
         {
-            if (IsIsbn(query))
+            if (Book.IsIsbn(query))
             {
                 return _bookRepository.GetAllByIsbn(query);
             }
@@ -28,3 +28,4 @@ namespace ShopDomainLibrary.Services
         
     }
 }
+ 
