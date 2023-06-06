@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ShopDomainLibrary
@@ -25,7 +26,11 @@ namespace ShopDomainLibrary
 
         internal static bool IsIsbn(string query)
         {
-            return false;
+            query = query.Replace("-", "")
+                         .Replace(" ", "")
+                         .ToUpper();
+
+            return  Regex.IsMatch(query, @"ISBN\\d{10}");
         }
     }
 }
