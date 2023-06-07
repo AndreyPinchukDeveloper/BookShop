@@ -1,10 +1,10 @@
 ﻿using BookStore.Web.Data.Enum;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookStore.Web.Models
 {
-    public class Club
+    public class Race
     {
         [Key]
         public int Id { get; set; }
@@ -15,11 +15,10 @@ namespace BookStore.Web.Models
         [ForeignKey("Address")]//PromeryKey-parent___ForeugnKey-child
         public int AddressId { get; set; }
         public Address Address { get; set; }
-        public ClubCategory ClubCategory { get; set; }
+        public RaceCategory RaceCategory { get; set; }
 
         [ForeignKey("AppUser")]
         public string? AppUserId { get; set; }
-        public AppUser? AppUser { get; set; } 
+        public AppUser? AppUser { get; set; }
     }
 }
- 
