@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.Web.Data
 {
+    //this is our database !
     public class AppDbContext : DbContext
     {
         //private readonly DbContextOptions _options;
