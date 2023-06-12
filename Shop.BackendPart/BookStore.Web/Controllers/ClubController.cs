@@ -1,4 +1,5 @@
 ﻿using BookStore.Web.Data;
+using BookStore.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.Web.Controllers
@@ -13,7 +14,7 @@ namespace BookStore.Web.Controllers
 
         public IActionResult Index()
         {
-            var clubs = _context.Clubs.ToList();
+            List<Club> clubs = _context.Clubs.ToList();
             return View(clubs);
         }
     }
