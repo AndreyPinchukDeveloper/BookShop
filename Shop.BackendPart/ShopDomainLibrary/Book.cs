@@ -9,14 +9,15 @@ namespace ShopDomainLibrary
 {
     public class Book
     {
-        public int Id { get;}
-
-        public string Isbn { get; }
+        public Guid UserId { get; set; }
+        public Guid Id { get; set; }
+        public string Title { get; }          
         public string Author { get; }
 
-        public string Title { get;}
-
-        public Book(int id, string title, string author, string isbn)
+        public string Details { get;}
+        public DateTime NewSupply { get; set; }
+        public DateTime SellDate { get; set; }
+        /*public Book(int id, string title, string author, string isbn)
         {
             Id = id;
             Title = title;
@@ -31,6 +32,6 @@ namespace ShopDomainLibrary
                          .ToUpper();
 
             return  Regex.IsMatch(query, @"ISBN\\d{10}");
-        }
+        }*/
     }
 }
