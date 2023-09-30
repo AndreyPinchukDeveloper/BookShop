@@ -9,12 +9,12 @@ namespace ShopDomainLibrary
 {
     public class Book
     {
-        public Guid UserId { get; set; }
+        public Guid BookId { get; set; }
         public Guid Id { get; set; }
-        public string Title { get; }          
-        public string Author { get; }
+        public string Title { get; set; }          
+        public string Author { get; set; }
 
-        public string Details { get;}
+        public string Descriptions { get; set; }
         public DateTime NewSupply { get; set; }
         public DateTime SellDate { get; set; }
         /*public Book(int id, string title, string author, string isbn)
