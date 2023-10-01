@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Shop.Application.Books.Commands
 {
-    public class UpdateBookCommand:IRequest<Unit>
+    public class DeleteBookCommand:IRequest<Unit>
     {
-        public Guid Id { get; set; }
         public Guid BookId { get; set; }
-        public DateTime SellDate { get; set; }
+        public Guid Id { get; set; }
     }
 }

@@ -5,12 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shop.Application.Books.Commands
+namespace Shop.Application.Books.Queries.GetBookDetails
 {
-    public class UpdateBookCommand:IRequest<Unit>
+    public class GetBookDetailsQuery:IRequest<BookDetailsViewModel>
     {
-        public Guid Id { get; set; }
         public Guid BookId { get; set; }
-        public DateTime SellDate { get; set; }
+        public Guid Id { get; set; }
     }
 }
