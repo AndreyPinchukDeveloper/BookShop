@@ -35,4 +35,4 @@ namespace Shop.Application.Books.Commands
         }
     }
 }
-}
+

@@ -13,7 +13,7 @@ namespace Shop.Persistence
     /// <summary>
     /// Add db context to use and register it
     /// </summary>
-    public static class DependencyImjection
+    public static class DependencyInjection
     {
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
