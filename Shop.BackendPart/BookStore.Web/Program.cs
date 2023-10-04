@@ -1,6 +1,7 @@
 using BookStore.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Shop.Application;
 using Shop.Application.Common.Mappings;
 using Shop.Application.Interfaces;
 using Shop.Persistence;
@@ -20,8 +21,18 @@ builder.Services.AddAutoMapper(config =>
     config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
     config.AddProfile(new AssemblyMappingProfile(typeof(IBooksDbContext).Assembly));
 });
-builder.Services.AddApplication();
-builder.Services.AddPersistence();   
+builder.Services.AddApplication(builder.Configuration);
+builder.Services.AddPersistence(builder.Configuration);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyHeader();
+        policy.AllowAnyMethod();
+        policy.AllowAnyOrigin();
+    });
+});
 
 var app = builder.Build();
 var host = Host.CreateDefaultBuilder(args).Build();//?????
@@ -59,8 +70,14 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseHttpsRedirection();
+app.UseCors("AlllowAll");
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.MapControllerRoute(
     name: "default",
