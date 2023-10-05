@@ -1,0 +1,22 @@
+﻿using AutoMapper;
+using Shop.Application.Books.Commands;
+using Shop.Application.Common.Mappings;
+
+namespace BookStore.Web.Models
+{
+    public class UpdateBookDTO:IMapWith<UpdateBookCommand>
+    {
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public string Descriptions { get; set; }
+
+        public void Mapping(Profile profile)
+        {
+            profile.CreateMap<CreateBookDTO, CreateBookCommand>()
+                .ForMember(bookViewModel => bookViewModel.Title,
+                opt => opt.MapFrom(book => book.Title))
+                .ForMember(bookViewModel => bookViewModel.Descriptions,
+                opt => opt.MapFrom(book => book.Descriptions));
+        }
+    }
+}
